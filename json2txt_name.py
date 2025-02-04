@@ -42,6 +42,14 @@ def ReplaceName(str_, Names, Names_en):
 				str_ = Replace(str_, "#"+name, "#"+result)#左换行
 			if ("#"+name.upper() in str_):
 				str_ = Replace(str_, "#"+name.upper(), "#"+result)#左换行且全大写
+			if (name+"\n" in str_):
+				str_ = Replace(str_, name+"\n", result+"\n")#右换行
+			if (name.upper()+"\n" in str_):
+				str_ = Replace(str_, name.upper()+"\n", result+"\n")#右换行且全大写
+			if ("\n"+name in str_):
+				str_ = Replace(str_, "\n"+name, "\n"+result)#左换行
+			if ("\n"+name.upper() in str_):
+				str_ = Replace(str_, "\n"+name.upper(), "\n"+result)#左换行且全大写
 			if ("，"+name in str_):
 				str_ = Replace(str_, "，"+name, "，"+result)#左侧有逗号
 			if ("，"+name.upper() in str_):
