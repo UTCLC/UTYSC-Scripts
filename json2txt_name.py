@@ -110,6 +110,8 @@ def ReplaceName(str_, Names, Names_en):
 				str_ = Replace(str_, name+"...", result+"...")#右侧省略号
 			if (name.upper()+"..." in str_):
 				str_ = Replace(str_, name.upper()+"...", result+"...")#右侧省略号且全大写
+			if ("\""+name+" \"" in str_):
+				str_ = Replace(str_, "\""+name+"\"", " \""+result+" \"")#左右引号
 			#if (name.upper() in str_):
 				#str_ = Replace(str_, name.upper(), result)#全大写
 			#if (name in str_):
