@@ -79,17 +79,17 @@ def ReplaceName(str_, Names, Names_en):
 			if ("\n"+name+" " in str_):
 				str_ = Replace(str_, "\n"+name+" ", "\n"+result+" ")#左换行右空格
 			if (" "+name+"#" in str_):
-				str_ = Replace(str_, " "+name+" ", " "+result+"#")#右换行左空格
+				str_ = Replace(str_, " "+name+"#", " "+result+"#")#右换行左空格
 			if (" "+name+"\n" in str_):
-				str_ = Replace(str_, " "+name.upper()+"\n", " "+result+"\n")#右换行左空格
+				str_ = Replace(str_, " "+name+"\n", " "+result+"\n")#右换行左空格
 			if ("#"+name.upper()+" " in str_):
-				str_ = Replace(str_, "#"+name.upper()+" ", "#"+result+" ")#左换行右空格
+				str_ = Replace(str_, "#"+name.upper()+" ", "#"+result+" ")#左换行右空格且全大写
 			if ("\n"+name.upper()+" " in str_):
-				str_ = Replace(str_, "\n"+name.upper()+" ", "\n"+result+" ")#左换行右空格
+				str_ = Replace(str_, "\n"+name.upper()+" ", "\n"+result+" ")#左换行右空格且全大写
 			if (" "+name.upper()+"#" in str_):
-				str_ = Replace(str_, " "+name.upper()+" ", " "+result+"#")#右换行左空格
+				str_ = Replace(str_, " "+name.upper()+"#", " "+result+"#")#右换行左空格且全大写
 			if (" "+name.upper()+"\n" in str_):
-				str_ = Replace(str_, " "+name.upper()+"\n", " "+result+"\n")#右换行左空格
+				str_ = Replace(str_, " "+name.upper()+"\n", " "+result+"\n")#右换行左空格且全大写
 			if ("，"+name in str_):
 				str_ = Replace(str_, "，"+name, "，"+result)#左侧有逗号
 			if ("，"+name.upper() in str_):
