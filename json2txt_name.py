@@ -34,6 +34,22 @@ def ReplaceName(str_, Names, Names_en):
 				str_ = Replace(str_, " "+name, " "+result)#左空格且句尾
 			if (str_.endswith(" "+name.upper()) or (" "+name.upper()+"\n" in str_)):
 				str_ = Replace(str_, " "+name.upper(), " "+result)#左空格且句尾且全大写
+			if (str_.startswith(name+"\n")):
+				str_ = Replace(str_, name+"\n", result+"\n")#右换行且句首
+			if (str_.startswith(name.upper()+"\n")):
+				str_ = Replace(str_, name.upper()+"\n", result+"\n")#右换行且句首且全大写
+			if (str_.endswith("\n"+name) or ("\n"+name+"\n" in str_)):
+				str_ = Replace(str_, "\n"+name, "\n"+result)#左换行且句尾
+			if (str_.endswith("\n"+name.upper()) or ("\n"+name.upper()+"\n" in str_)):
+				str_ = Replace(str_, "\n"+name.upper(), "\n"+result)#左换行且句尾且全大写
+			if (str_.startswith(name+"\n")):
+				str_ = Replace(str_, name+"\n", result+"\n")#右换行且句首
+			if (str_.startswith(name.upper()+"\n")):
+				str_ = Replace(str_, name.upper()+"\n", result+"\n")#右换行且句首且全大写
+			if (str_.endswith("\n"+name) or ("\n"+name+"\n" in str_)):
+				str_ = Replace(str_, "\n"+name, "\n"+result)#左换行且句尾
+			if (str_.endswith("\n"+name.upper()) or ("\n"+name.upper()+"\n" in str_)):
+				str_ = Replace(str_, "\n"+name.upper(), "\n"+result)#左换行且句尾且全大写
 			# if (name+"#" in str_):
 			# 	str_ = Replace(str_, name+"#", result+"#")#右换行
 			# if (name.upper()+"#" in str_):
